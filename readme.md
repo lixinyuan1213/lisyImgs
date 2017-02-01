@@ -13,5 +13,5 @@
 ##### 说明：
 ```python
 图片链接为：
-https://raw.githubusercontent.com/lixinyuan1213/lisyImg/master/xxx.jpg
+https://raw.githubusercontent.com/lixinyuan1213/lisyImgs/master/folder/xxx.jpg
 ```
