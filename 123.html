@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<title>{pboot:sitetitle}</title>
+<meta name="keywords" content="{pboot:sitekeywords}">
+<meta name="description" content="{pboot:sitedescription}">
+<meta name="author" content="www.adminbuy.cn K279"/>
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/ska/css/default.css" />
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/ska/css/jquery.fullpage.css" />
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/ska/css/prettyphoto.css" />
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/ska/css/global.css" />
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/ska/css/resize.css" />
+<!--[if lt IE 7]>
+        <link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/ska/css/ie6.css" media="screen, projection" />
+        <![endif]-->
+<!--[if lt IE 8]>
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+        <link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/skin/ska/css/ie.css" media="screen, projection" />
+        <![endif]-->
+<script type="text/javascript" src="{pboot:sitedomain}/skin/ska/js/jquery.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/ska/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/ska/js/jquery.caroufredsel-6.2.1.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/ska/js/lodash.compat.min.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/ska/js/jquery.icheck.min.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/ska/js/highcharts.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/ska/js/exporting.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/ska/js/modernizr.custom.min.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/ska/js/jquery.shuffle.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/ska/js/page.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/ska/js/evenheights.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/ska/js/viewport.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/ska/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/ska/js/jquery.simplr.smoothscroll.min.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/ska/js/waypoints.min.js" ></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/ska/js/webfoss.preloader.js" ></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/ska/js/jquery.fullpage.js" ></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/ska/js/webfoss.fullscreenstage.js" ></script>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/ska/js/jquery.prettyphoto.js"></script>
+</head>
+<body class="action--site-index controller--site">
+<div class="container" id="page">
+  <div class="nav-toggle">
+    <div class="icon"></div>
+  </div>
+  <div class="pageinner">
+    <div class="shadow"></div>
+    {include file=head2.html} 
+    <script>
+
+                    var $width = $('.headerBox .nav li.active a').width();
+                    var $left = $('.headerBox .nav li.active a').position().left;
+                    $('.headerBox .line').stop().animate({'left': $left, 'width': $width});
+
+                    $('.headerBox .nav li a').mouseenter(function() {
+                        var $width = $(this).width();
+                        var $left = $(this).position().left;
+                        $('.headerBox .line').stop().animate({'left': $left, 'width': $width});
+                    });
+                    $('.headerBox .nav li a').mouseleave(function() {
+                        var $width = $('.headerBox .nav li.active a').width();
+                        var $left = $('.headerBox .nav li.active a').position().left;
+                        $('.headerBox .line').stop().animate({'left': $left, 'width': $width});
+                    });
+
+                    $('.headerBox .nav li').mouseenter(function() {
+                        $(this).children('a').stop().animate({'marginTop': '0px'}, 'slow', 'swing');
+                    });
+                    $('.headerBox .nav li').mouseleave(function() {
+                        $(this).children('a').stop().animate({'marginTop': '-79px'}, 'slow', 'swing');
+                    });
+
+                </script>
+    <div class="banners section">
+      <div class="banner">
+        <div class="slider">
+          {pboot:slide gid=1 num=10}
+          <div class="item item1 image-wrapper"> <img src="[slide:src]" alt="" />
+            <div class="text"><br/> &nbsp;
+              <a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2022030870号</a> </div>
+          </div>
+          {/pboot:slide}
+        </div>
+      </div>
+      <div class="slidebtn"></div>
+    </div>
+    {pboot:sort scode=1}
+    <div class="homeabout section" id="homeabout">
+      <div class='hometitle'>
+        <h1> <a href="[sort:link]">[sort:subname]</a> </h1>
+        <h2> <a href="[sort:link]">[sort:name]</a> </h2>
+      </div>
+      <div class="aboutin">
+        <!--p class="tip"><a>[sort:def1]</a></p-->
+        <ul>
+          <li class="listnumber1">
+            <div class="liin">
+              <div class="nummer">
+                <div class="data"> <span class="2">200+</span><span></span> </div>
+                <div class="wenzi"> <span>Talent acquisition</span> <span>人才引进</span> </div>
+              </div>
+            </div>
+          </li>
+          <li class="listnumber2">
+            <div class="liin">
+              <div class="nummer">
+                <div class="data"> <span class="num">1</span> <span>万</span> </div>
+                <div class="wenzi"> <span>conversion</span> <span>引智项目</span> </div>
+              </div>
+            </div>
+          </li>
+          <li class="listnumber3">
+            <div class="liin">
+              <div class="nummer">
+                <div class="data"> <span class="num">1</span> <span>万</span> </div>
+                <div class="wenzi"> <span>to ground</span> <span>项目落地</span> </div>
+              </div>
+            </div>
+          </li>
+          <li class="lastli listnumber4">
+            <div class="liin">
+              <div class="nummer">
+                <div class="data"> <span class="num">3+</span> <span></span> </div>
+                <div class="wenzi"> <span>Overseas Study</span> <span>留学培训</span> </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    {/pboot:sort}
+    {pboot:sort scode=11}
+    <div class="homebusiness section" id="homebusiness">
+      <div class='hometitle'> 
+        <h1><a href="[sort:link]">[sort:subname]</a></h1>
+        <h301><a href="[sort:link]">[sort:name]<br/></a></h301>
+      </div>
+<br/><br/> &nbsp;
+      <ul>
+        {pboot:nav parent={sort:tcode} parent=11 num=4} 
+        <li {pboot:if([nav:i]==0)}class="left"{else}class="right"{/pboot:if}> 
+        <a href="[nav:link]"><img src="[nav:ico]" /></a> 
+        <a href="[nav:link]" class="hover"> <span class="en">[nav:subname]</span> <span class="cn">[nav:name]</span> </a> </li>
+        {/pboot:nav} 
+      </ul>
+    </div>
+    <!--
+    {/pboot:sort}
+    {pboot:sort scode=7}
+   <div class="homenews section" id="homenews">
+      <div class='hometitle'> 
+        <h1><a href="[sort:link]">[sort:subname]</a></h1>
+        <h2><a href="[sort:link]">[sort:name]</a></h2>
+      </div>
+      <div class="news">
+        <ul>
+          {pboot:list scode=[sort:scode] num=4 order=sorting}
+          <li> <a href="[list:link]" class="time">[list:date style=Y-m-d]</a> <a href="[list:link]" class="title">[list:title]</a> <a href="[list:link]" class="content">[list:description lencn=50]</a> </li>
+          {/pboot:list}
+        </ul>
+        <a class="morebtn" href="[sort:link]">了解更多资讯</a></div>
+    </div>
+-->
+
+
+
+    {/pboot:sort} 
+    <div class="homecontact section" id="homecontact"> 
+      <div class="icon icon1"><img src="{pboot:sitedomain}/skin/ska/images/icon_more.png" /></div>
+      {pboot:sort scode=19}
+      <div class='hometitle'>
+          <!--
+        <h1><a href="[sort:link]">[sort:subname]</a></h1>
+        <h2><a href="[sort:link]">[sort:name]</a></h2>
+        -->
+        <h1><a href="/about/">[sort:subname]</a></h1>
+        <h2><a href="/about/">[sort:name]</a></h2>
+      </div>
+      {/pboot:sort} 
+      <div class="footerhover"></div>
+      <div id='footerBox' class="footerbox footerbox1">
+        <div class='footermap'> {pboot:nav num=5 parent=0}
+    <ul class='column[nav:i]'>
+      <h1><a href='[nav:link]'>[nav:name]</a></h1>
+      {pboot:2nav num=10 parent=[nav:scode]}
+      <li><a href='[2nav:link]'>[2nav:name]</a></li>
+      {/pboot:2nav}
+    </ul>
+    {/pboot:nav} </div>
+        <p class='copy'>{pboot:sitecopyright} <a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow">{pboot:siteicp}qqq</a> <a href="{pboot:sitedomain}/sitemap.xml" target="_blank">XML地图</a> {pboot:sitestatistical}</p>
+      </div>
+    </div>
+    <script>
+    var header = function() {
+        var $width = $('.headerBox .nav li.active a').width();
+        var $left = $('.headerBox .nav li.active a').position().left;
+        $('.headerBox .line').stop().animate({'left': $left, 'width': $width});
+
+        $('.headerBox .nav li a').mouseenter(function() {
+            var $width = $(this).width();
+            var $left = $(this).position().left;
+            $('.headerBox .line').stop().animate({'left': $left, 'width': $width});
+        });
+        $('.headerBox .nav li a').mouseleave(function() {
+            var $width = $('.headerBox .nav li.active a').width();
+            var $left = $('.headerBox .nav li.active a').position().left;
+            $('.headerBox .line').stop().animate({'left': $left, 'width': $width});
+        });
+    };
+
+    var homeabout = function() {
+        $('#homeabout').waypoint(function(dir) {
+            if (dir === 'down')
+            {
+                $('.homeabout').animate({'backgroundColor': '#cecece', 'opacity': 1}, 'slow');
+                $('.homeabout .hometitle h1 a').delay(300).animate({'marginTop': '0px', 'opacity': 1}, 'slow');
+                $('.homeabout .hometitle h2 a').delay(600).animate({'opacity': 1}, 'slow');
+                $('.homeabout .aboutin p').delay(1000).animate({'opacity': 1}, 'slow');
+                var counter = 0,
+                        interval = 20000,
+                        speed = parseInt(interval / 400);
+                setInterval(function() {
+                    if (counter <= 16) {
+                        $(".listnumber1 .nummer").find('span.num').text(counter);
+                        counter++;
+                    }
+                }, speed);
+                var counter2 = 0,
+                        interval = 4500,
+                        speed2 = parseInt(interval / 400);
+                setInterval(function() {
+                    if (counter2 <= 100) {
+                        $(".listnumber2 .nummer").find('span.num').text(counter2);
+                        counter2++;
+                    }
+                }, speed2);
+
+                var counter3 = 0,
+                        interval = 2800,
+                        speed3 = parseInt(interval / 400);
+                setInterval(function() {
+                    if (counter3 <= 200) {
+                        $(".listnumber3 .nummer").find('span.num').text(counter3);
+                        counter3++;
+                    }
+                }, speed3);
+
+                var counter4 = 0,
+                        interval = 4000,
+                        speed4 = parseInt(interval / 400);
+                setInterval(function() {
+                    if (counter4 <= 3000) {
+                        $(".listnumber4 .nummer").find('span.num').text(counter4);
+                        counter4 = counter4 + 15;
+                    }
+                }, speed4);
+            }
+
+        }, {'offset': '50%'});
+    };
+    var homebusiness = function() {
+        $('#homebusiness').waypoint(function(dir) {
+            if (dir === 'down')
+            {
+                $('.homebusiness').animate({'opacity': 1}, 'slow');
+                $('.homebusiness .hometitle h1 a').delay(300).animate({'marginTop': '0px', 'opacity': 1}, 'slow');
+                $('.homebusiness .hometitle h2 a').delay(600).animate({'opacity': 1}, 'slow');
+                var $width = $(window).width();
+                if ($width > 960) {
+                    $('.homebusiness ul .left').delay(900).animate({'marginLeft': '0px', 'opacity': 1}, 1000);
+                    $('.homebusiness ul .right').delay(900).animate({'marginRight': '0px', 'opacity': 1}, 1000);
+                } else {
+                    $('.homebusiness ul .left').delay(900).animate({'marginLeft': '0px', 'opacity': 1}, 1000);
+                    $('.homebusiness ul .right').delay(900).animate({'marginRight': '0px', 'opacity': 1}, 1000);
+
+                }
+
+            }
+
+        }, {'offset': '50%'});
+    };
+    var homenews = function() {
+        $('#homenews').waypoint(function(dir) {
+            if (dir === 'down')
+            {
+                $('.homenews').animate({'opacity': 1}, 'slow');
+                $('.homenews .hometitle h1 a').delay(300).animate({'marginTop': '0px', 'opacity': 1}, 'slow');
+                $('.homenews .hometitle h2').delay(600).animate({'opacity': 1}, 'slow');
+                var time = 900;
+                var num = $('.homenews .news ul li').length;
+                for (var i = 0; i < num; i++) {
+                    $('.homenews .news ul li').eq(i).delay(time).animate({'opacity': 1}, 1000);
+                    time = time + 600;
+                }
+                $('.homenews .morebtn').delay(3000).animate({'opacity': 1}, 'slow');
+
+            }
+
+        }, {'offset': '50%'});
+    };
+    var homecontact = function() {
+        $('#homecontact').waypoint(function(dir) {
+            if (dir === 'down')
+            {
+                $('.homecontact').animate({'opacity': 1}, 'slow');
+
+            }
+
+        }, {'offset': '50%'});
+    };
+    var beforeload = function() {
+        $('.homeabout').css({'opacity': 0});
+        $('.homebusiness').css({'opacity': 0});
+        $('.homenews').css({'opacity': 0});
+        $('.homecontact').css({'opacity': 0});
+        $('.homeabout .hometitle h1 a').css({'marginTop': '50px', 'opacity': 0});
+        $('.homeabout .hometitle h2 a').css({'opacity': 0});
+        $('.homeabout .aboutin p').css({'opacity': 0});
+//        $('.homeabout .aboutin ul li').css({'opacity': 0});
+        $('.homebusiness .hometitle h1 a').css({'marginTop': '50px', 'opacity': 0});
+        $('.homebusiness .hometitle h2 a').css({'opacity': 0});
+        $('.homebusiness ul .left').css({'marginLeft': '-480px', 'opacity': 0});
+        $('.homebusiness ul .right').css({'marginRight': '-480px', 'opacity': 0});
+        $('.homenews .news ul li').css({'opacity': 0});
+        $('.homenews .hometitle h1 a').css({'marginTop': '50px', 'opacity': 0});
+        $('.homenews .hometitle h2').css({'opacity': 0});
+        $('.homenews .morebtn').css({'opacity': 0}, 'slow');
+
+    };
+    var onAllLoad = function()
+    {
+        homeabout();
+        homebusiness();
+        homenews();
+        homecontact();
+    };
+    var preload = function() {
+        beforeload();
+        $('#page').bind('preloadfinish', onAllLoad).preloader();
+    };
+    preload();
+
+
+    $('#page').fullpage({
+        afterLoad: function(anchorLink, index) {
+            console.log(anchorLink,index)
+            if (index === 1) {
+                $("#headerBox1").stop().animate({'top': '0px'});
+                $("#headerBox2").stop().animate({'top': '-80px'});
+            }
+
+            if (index === 2) {
+                homeabout();
+                header();
+                $("#headerBox1").stop().animate({'top': '-80px'});
+                $("#headerBox2").stop().animate({'top': '0px'});
+            }
+            if (index === 3) {
+                homebusiness();
+                header();
+            }
+            if (index === 4) {
+                homenews();
+                header();
+            }
+            if (index === 5) {
+                homecontact();
+                header();
+                $('.footerhover').mouseenter(function() {
+                    $('.footerbox').delay(100).stop().animate({'height': '204px'});
+                });
+                $('.footerbox').mouseleave(function() {
+                    $('.footerbox').delay(100).stop().animate({'height': '0px'});
+                });
+            }
+
+        }
+    });
+
+
+    var $window = $(window);
+
+    var $windowWidth = function() {
+        return $window.width();
+    };
+    var $windowHeight = function() {
+        return $window.height();
+    };
+    $window.fssResize(function() {
+        var width = $windowWidth();
+        var height = $windowHeight();
+        $(".banner").height(height);
+        $('.slider').each(function() {
+            $this = $(this);
+            $this.height(height).width(width);
+            $this.triggerHandler("configuration", {height: height, width: width, items: {width: width}});
+            $this.triggerHandler("updateSizes");
+        });
+    });
+
+    $('.slider .image-wrapper').each(function() {
+        $(this).fullscreenstage({'width': 1920, 'height': 1080});
+    });
+
+
+
+    $(window).fssResize();
+    $('.slider').carouFredSel({'responsive': true, items: {visible: 1}, 'scroll': {'duration': 1000, 'items': 1, 'fx': 'crossfade'}, 'auto': true, 'prev': '.prev1', 'next': '.next1'});
+    $(window).fssResize();
+
+
+
+
+
+    var homeh = $('.homebottom').height() - 221;
+    $('.homecontact').height(homeh);
+
+
+
+
+    $('.homenews .news ul li:odd').css({'float': 'right'});
+
+    $('.homebusiness ul li').mouseenter(function() {
+        $(this).children('.hover').stop().animate({'height': '78px'});
+        $(this).find('.en').stop().animate({'paddingTop': '18px', 'fontSize': '24px', 'backgroundPosition': 'center 65px'});
+        $(this).find('.cn').stop().animate({'paddingTop': '0', 'fontSize': '16px'});
+    });
+    $('.homebusiness ul li').mouseleave(function() {
+        $(this).children('.hover').stop().animate({'height': '100%'});
+        $(this).find('.en').stop().animate({'paddingTop': '44%', 'fontSize': '36px', 'backgroundPosition': 'center -60px'});
+        $(this).find('.cn').stop().animate({'paddingTop': '2%', 'fontSize': '18px'});
+    });
+
+    $('.slidebtn').addClass('o');
+    $('.slidebtn').mouseenter(function() {
+        $(this).removeClass('o');
+    });
+    $('.slidebtn').mouseleave(function() {
+        $(this).addClass('o');
+    });
+    $('.slidebtn').click(function() {
+        var top = $('#homeabout').offset().top;
+        $('html,body').animate({'scrollTop': top}, 1000);
+    });
+
+
+    $('.homecontact .icon1').click(function() {
+        $('<div class="screen"></div>').appendTo('body');
+        $('<div class="screenin"></div>').appendTo('.screen');
+        $('<div class="screenBox"></div>').appendTo('.screen .screenin');
+        $('<img src="{pboot:sitedomain}/skin/ska/images/bg_screen.jpg" />').appendTo('.screen .screenBox');
+        $('<ul><li class="list1"><p class="title">ADDRESS</p><p class="line">&nbsp;</p><p>{pboot:companyaddress}</p></li><li class="list2"><p class="title">CALL US</p><p class="line">&nbsp;</p><p>{pboot:companyphone}</p></li><li class="list3"><p class="title">FAX</p><p class="line">&nbsp;</p><p>{pboot:companyfax}</p></li><li class="list4"><p class="title">EMAIL</p><p class="line">&nbsp;</p><p>{pboot:companyemail}</p></li></ul>').appendTo('.screen .screenBox');
+        $('<div class="close"></div>').appendTo('.screen .screenBox');
+        $('.screen').animate({'opacity': 1}, function() {
+            $('.screen .screenin').stop().animate({'height': '458px'});
+        });
+
+        $('.screenBox li:odd').css({'marginRight': '10%', 'float': 'right'});
+        $('.screenBox li:even').css({'marginLeft': '10%'});
+    });
+
+    $('.homecontact .icon2').click(function() {
+        $('<div class="screen"></div>').appendTo('body');
+        $('<div class="screenin"></div>').appendTo('.screen');
+        $('<div class="screenBox"></div>').appendTo('.screen .screenin');
+        $('<img src="{pboot:sitedomain}/skin/ska/images/bg_screen.jpg" />').appendTo('.screen .screenBox');
+        $('<div id="map" class="map"></div>').appendTo('.screen .screenBox');
+        $('<div class="close"></div>').appendTo('.screen .screenBox');
+        $('.screen').animate({'opacity': 1}, function() {
+            $('.screen .screenin').stop().animate({'height': '458px'});
+        });
+        $('.screenBox li:odd').css({'marginRight': '10%', 'float': 'right'});
+        $('.screenBox li:even').css({'marginLeft': '10%'});
+
+//创建和初始化地图函数：
+        
+    });
+
+
+
+    $('body').on('click', '.screen .close', function() {
+        $('.screen .screenin').animate({'height': '0px'}, function() {
+            $('.screen').remove();
+        });
+    });
+
+
+
+</script> 
+    {include file=foot2.html} 
+    
+  </div>
+  <!-- pageinner -->
+  
+  <ul class="grid">
+    <li id="sideli" class="three">
+      <ul class="sidenav">
+        <li class='active current'><a href='{pboot:sitedomain}/'>首页</a></li>
+        {pboot:nav num=10 parent=0}
+        <li class=''><a href='[nav:link]'>[nav:name]</a></li>
+        {/pboot:nav}
+      </ul>
+    </li>
+  </ul>
+  <script>
+                $(".nav-toggle").click(function() {
+                    $("#sideli").toggleClass("sideclk");
+                    $("body").toggleClass("sideopen");
+                });
+                $(".shadow").click(function() {
+                    $("#sideli").toggleClass("sideclk");
+                    $("body").toggleClass("sideopen");
+                });
+            </script> 
+</div>
+<!-- page --> 
+
+<script>
+            var beforeload = function() {
+
+
+            };
+            var onAllLoad = function()
+            {
+                $('body').waypoint(function(dir) {
+                    console.log(11111)
+                    if (dir === 'down')
+                    {
+                        $("#headerBox1").stop().animate({'top': '-80px'});
+                        $("#headerBox2").stop().animate({'top': '0px'});
+                    } else {
+                        $("#headerBox2").stop().animate({'top': '-80px'});
+                        $("#headerBox1").stop().animate({'top': '0px'});
+                    }
+                }, {'offset': -50});
+            };
+            var preload = function() {
+                beforeload();
+                $('#page').bind('preloadfinish', onAllLoad).preloader();
+            };
+            preload();
+        </script>
+</body>
+</html>
